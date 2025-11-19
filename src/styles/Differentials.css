@@ -1,0 +1,88 @@
+.differentials-section {
+    padding: 120px 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+/* Background Glow - Light theme */
+.differentials-section::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(32, 93, 245, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.differentials-section .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.differentials-section .section-title {
+    color: #1a2b4b;
+    margin-bottom: 60px;
+}
+
+.differentials-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Glass Cards - Light theme */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.diff-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.diff-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+    box-shadow: 0 15px 40px rgba(32, 93, 245, 0.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(243, 243, 243, 0.5));
+    width: 140px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.diff-card h4 {
+    font-size: 1.3rem;
+    color: #1a2b4b;
+    margin-bottom: 12px;
+}
+
+.diff-card p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
